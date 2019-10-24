@@ -1,0 +1,17 @@
+// TITLE SHAME
+/* HEADER */
+.primary-content .content-header {
+    .title {
+        //this needs to be fixed by a parent container
+        max-width: $content-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+// TITLE OPTIMIZED
+@media screen and (min-width: 992px) {
+    h1.title,
+    h1.pane-title {
+        font-size: 3rem;
+    }
+}

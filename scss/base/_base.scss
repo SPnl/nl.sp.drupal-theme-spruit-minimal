@@ -1,0 +1,104 @@
+/* BASE STYLING */
+
+
+/* Set root fontsize depending om screen width */
+html {
+    font-size: 18px; //set as root size
+}
+@media screen and (min-width: 1980px){
+    html {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 2560px){
+    html {
+        font-size: 32px;
+    }
+}
+
+body {
+    font-family: $font-body;
+}
+
+/* FONTSIZE BASED ON ROOT */
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-primary;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: .5em 0 .5em 0;
+    line-height: 1;
+}
+h1 a:hover,
+h2 a:hover {
+    text-decoration: none;
+    color: $color3;
+}
+p {
+    margin: 0 0 1rem 0;
+    font-size: 1rem; //16px
+    line-height: 1.42; //24px
+}
+strong {
+      font-weight: normal;
+      font-family: $font-strong;
+}
+ul, ol {
+        line-height: 1.42;
+    }
+li {
+    margin-bottom: .5em;
+}
+@media screen and (min-width: 768px){
+    p {
+        font-size: 1.125rem; // 18px
+        line-height: 1.62; // 26px 
+    }
+    ul, ol {
+        line-height: 1.62;
+    }
+}
+h1 {
+    font-size: 2rem; //36px
+}
+h2 {
+    font-size: 1.5rem; //27px
+}   
+h3 {
+    font-size: 1.17rem; //21px
+}   
+h4 {
+    font-size: 1rem; //18px
+}   
+h5 {
+    font-size: 0.83rem; //15px
+
+}   
+h6 {
+    font-size: 0.67rem; //12px
+} 
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    // normalize
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+@media (min-width: 768px){
+    hr {
+        margin: 3rem 0rem;
+    }
+}
+@media (min-width: 1200px){
+    hr {
+        margin: 5rem 0rem;
+    }
+}

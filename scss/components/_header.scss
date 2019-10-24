@@ -1,0 +1,67 @@
+/* SITE HEADER */
+
+#site-header {
+    display: table;
+    width: 100%;
+    border-top: 5px solid $color1;
+    position: relative;
+}
+
+header .site-branding {
+    display: table-cell;
+    padding: .5rem;
+    vertical-align: middle;
+}
+
+header .site-name a {
+    text-decoration: none;
+    color: $color3;
+}
+
+
+@media screen and (min-width: 576px){
+    header .site-logo {
+        img, svg {
+           height: 2rem;
+           width: auto;
+        }
+    }
+    header .site-branding {
+        padding: 16px;
+    }
+    header nav ul li a,
+    header nav ul li a:link,
+    header nav ul li a:visited {
+        padding: 16px;
+    }
+}
+
+header .site-logo {
+    a {
+      display: inline-block;
+    }
+    image, svg {
+        display: inline-block;
+        height: auto; // adjusts to width
+        width: 3rem; // prevents centering for IE
+    }
+    svg {
+        fill: $color1;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    header .site-logo {
+        image, svg {
+            width: 4rem; // prevents centering for IE
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    header .site-logo {
+        image, svg {
+            width: 5rem; // prevents centering for IE
+        }
+    }
+}

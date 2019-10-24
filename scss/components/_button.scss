@@ -1,0 +1,48 @@
+/* BUTTONS */
+
+.btn, a.btn {
+    font-family: $font-primary;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: $color1;
+    padding: 1rem 2rem;
+    color: $color2;
+    border: 1px solid $color1;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    -webkit-appearance: none; // removes platform specific styling
+}
+.btn:hover, a.btn:hover,
+.btn-invert:hover, a.btn-invert:hover {
+    background: $color2;
+    color: $color3;
+    border-color: $color2;
+    text-decoration: none;
+}
+.btn-invert, a.btn-invert {
+    @extend .btn;  // use default btn style
+    background: $color2;
+    color: $color1;
+    border: 1px solid $color1;
+}
+.btn-invert.tiny,
+.btn.tiny {
+    padding: 8px 16px; // -1px to correct border
+    font-size: 0.625rem; //10px
+    letter-spacing: .2px;
+}
+.btn-invert.small,
+.btn.small {
+    padding: 7px 16px; // -1px to correct border
+    font-size: 1rem; //16px
+    letter-spacing: .2px;
+}
+.btn-invert.large,
+.btn.large {
+    padding: 15px 32px; // -1px to correct border
+    font-size: 2rem; //32px
+    letter-spacing: .2px;
+}

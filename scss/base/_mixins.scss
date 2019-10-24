@@ -1,0 +1,11 @@
+@mixin sliced-tomato {
+    font-family: $sp-icons;
+    content: 'T';
+    line-height: 1;
+    display: block;
+    height: 48px;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    font-size: 64px;
+}
