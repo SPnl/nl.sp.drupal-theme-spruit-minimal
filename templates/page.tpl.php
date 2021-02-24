@@ -51,6 +51,9 @@
       <?php if ($page['footer']): ?>
        <?php print render($page['footer']); ?>
       <?php else: ?>
+      <nav class="footer-navigation menu">
+       <?php print theme('links__system_main_menu', array('links' => $main_menu, 'heading' => '')); ?>
+      </nav>
       <p class="terms">Dit is een site van de SP &copy; <?php print date('Y'); ?> Alle rechten voorbehouden.<br> Afbeeldingen zijn te gebruiken onder CC-BY-ND 3.0 licentie, tenzij anders aangegeven.<br> Meer informatie over privacy en verwerking van gegevens is te vinden op onze <a href="https://www.sp.nl/privacy">privacy pagina</a>.</p>
       <?php endif; ?>
   </footer>

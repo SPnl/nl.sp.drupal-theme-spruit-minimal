@@ -30,9 +30,11 @@ function spruit_minimal_preprocess_page(&$variables) {
   if (isset($variables['node']->type)) {
     $variables['theme_hook_suggestions'][]='page__'.$variables['node']->type;
   }
-    
-  $variables['logo_url'] = variable_get('logo_url','https://www.sp.nl/?landing=0');
-  
+
+  // You can set the redirect of the logo to a custom url
+  $variables['logo_url'] = variable_get('logo_url',url('<front>'));
+
+  // Always stay on site when logged in
   if (user_is_logged_in()) {
     $variables['logo_url'] =  url('<front>');
   }

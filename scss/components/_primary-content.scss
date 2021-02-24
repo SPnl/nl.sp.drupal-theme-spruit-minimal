@@ -1,3 +1,10 @@
+// PREVENT FOOTER FLOATING MID PAGE
+.primary-content {
+    min-height: calc(100vh - 350px);
+}
+// end shame
+
+
 .primary-content {
 	padding: 1rem;
 	.title {
