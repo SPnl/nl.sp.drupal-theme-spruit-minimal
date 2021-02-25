@@ -1,35 +1,8 @@
 /* NAVIGATION */
-.site-navigation {
-    background: $color1;
-    .links {
-          margin: auto;
-          max-width: $content-width;
-          padding: 0;
-          text-align: center;
-    }
-    li {
-        display: inline-block;
-        font-family: $font-middle;
-        text-transform: uppercase;
-        margin: 0;
-    }
-    a {
-      color: $color2;
-      padding: 1rem;
-      display: inline-block;
-      &.active {
-        color: $color2;
-      }
-      &:hover {
-        background: $color2;
-        color: $color1;
-        text-decoration: none;
-      }
-    }
-}
+
 
 /* BACK TO TOP */
-nav.top-nav {
+.top-nav {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -38,7 +11,7 @@ nav.top-nav {
   padding: 1em;
   z-index: 1;
 }
-nav.top-nav a {
+.top-nav a {
   width: 4em;
   background: $color1;
   color: #fff;
@@ -47,15 +20,15 @@ nav.top-nav a {
   text-align: center;
   box-shadow: 2px 2px 1.4em rgba(2,2,2,.14);
 }
-nav.top-nav a:hover {
+.top-nav a:hover {
   background: #000;
 }
-nav.top-nav a:before {
+.top-nav a:before {
   content: "^";
   font-family: 'SPruit-icons';
   font-size: 1.8em;
 }
-nav.top-nav a .text {
+.top-nav a .text {
   display: none;
 }
 

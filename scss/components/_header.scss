@@ -1,46 +1,31 @@
-/* SITE HEADER */
-
+// SITE HEADER
 #site-header {
-    display: table;
     width: 100%;
     border-top: 5px solid $color1;
     position: relative;
+    display: grid;
+    grid-template-columns: 240px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "logo menu"
+        "mobile-menu mobile-menu";
+    align-items: center;
 }
-
-header .site-branding {
-    display: table-cell;
-    padding: .5rem;
-    vertical-align: middle;
-}
-
-header .site-name a {
-    text-decoration: none;
-    color: $color3;
-}
-
-
-@media screen and (min-width: 576px){
-    header .site-logo {
-        img, svg {
-           height: 2rem;
-           width: auto;
-        }
-    }
-    header .site-branding {
-        padding: 16px;
-    }
-    header nav ul li a,
-    header nav ul li a:link,
-    header nav ul li a:visited {
-        padding: 16px;
+@media screen and (min-width: 1160px){
+    #site-header {
+        grid-template-columns: 240px auto 240px; //align menu in center
+        grid-template-rows: auto;
+        grid-template-areas:
+            "logo menu toggle";
     }
 }
 
-header .site-logo {
-    a {
-      display: inline-block;
-    }
-    image, svg {
+
+// SITE LOGO
+.site-logo {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    svg {
         display: inline-block;
         height: auto; // adjusts to width
         width: 3rem; // prevents centering for IE
@@ -49,19 +34,89 @@ header .site-logo {
         fill: $color1;
     }
 }
-
-@media screen and (min-width: 576px) {
-    header .site-logo {
-        image, svg {
-            width: 4rem; // prevents centering for IE
+@media screen and (min-width: 576px){
+    .site-logo {
+        svg {
+           height: 2rem;
+           width: auto;
+           width: 4rem; // prevents centering for IE
+        }
+    }
+}
+@media screen and (min-width: 1280px) {
+    .site-logo {
+        svg {
+            width: 5rem; // prevents centering for IE
         }
     }
 }
 
-@media screen and (min-width: 1280px) {
-    header .site-logo {
-        image, svg {
-            width: 5rem; // prevents centering for IE
-        }
+
+// HEADER MENU
+.site-navigation {
+    grid-area: mobile-menu;
+    display: none;
+    ul {
+          margin: 0;
+          padding: 0;
+          text-align: center;
     }
+    li {
+        display: inline-block;
+        font-family: $font-middle;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    a {
+      padding: 1rem;
+      display: inline-block;
+      &:hover {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+}
+@media screen and (min-width: 880px){
+    .site-navigation {
+        grid-area: menu;
+        display: block;
+    }
+}
+
+
+// MOBILE MENU
+.menu-toggle {
+    display: grid; // enable hamburger menu
+    grid-area: menu;
+    justify-content: end;
+    padding-right: 0.5rem;
+    z-index: 2;
+    
+}
+@media screen and (min-width: 880px){
+    .menu-toggle {
+        display: none;
+    }
+}
+.menu-toggle button {
+    background: none;
+    border: none;
+    margin: 0;
+    outline: none; //remove chrome-safari default focus
+    color: $color1;
+    cursor: pointer;
+    &:hover {
+        color: $color3;
+    }
+}
+.menu-toggle button .text {
+    display: none;
+}
+.menu-toggle button:after {
+    font-family: 'SPruit-icons';
+    content: '\e900';
+    display: block;
+    font-size: 2.2rem;
+    padding: 0.5rem;
+    line-height: 1;
 }

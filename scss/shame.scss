@@ -3,45 +3,6 @@
  * Make sure to put url/page where it was applied
  */
 
-.field-hero-image {
-   clip-path: polygon(4% 10%,49% 0%,95% 10%,93% 88%,86% 88%,78% 99%,80% 88%,6% 85%);
-   overflow: hidden
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-@media screen and (min-width: 769px) {
-  .field-hero-image {
-     margin-left: -280px;
-     margin-right: -280px;
-     margin-bottom: -40px;
-  }
-  .front .field-hero-image {
-     margin-top: -80px;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .site-header .site-logo img, header .site-logo svg {
-    height: 4.5rem;
-    width: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .site-header .site-logo img, header .site-logo svg {
-    height: 5.8rem;
-    width: auto;
-  }
-}
-
-header .site-logo a {
-    display: inline-block;
-    max-width: 85%;
-}
-
 .front .title {
   display: none;
 }

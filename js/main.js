@@ -2,7 +2,7 @@
 
     Drupal.behaviors.SiteHeaderMenuToggle = {
         attach: function(context, settings) {
-            $('.site-navigation').hide();
+            //$('.site-navigation').hide();
             $('.menu-toggle button', context).click(function(event) {
                 event.preventDefault();
                 $('.site-navigation').slideToggle(320);

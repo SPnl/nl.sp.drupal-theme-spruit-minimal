@@ -44,7 +44,10 @@
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
 
       <a id="primary-content"></a>
-      <div class="content"><?php print render($page['content']); ?></div>
+      <div class="content">
+        <?php print views_embed_view('nieuws','page'); ?>
+        <?php print views_embed_view('nieuws','block_1'); ?>
+      </div>
     </div>
 
   <footer class="site-footer" id="site-footer">
